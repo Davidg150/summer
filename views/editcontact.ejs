@@ -1,0 +1,39 @@
+<% include ../partials/header %>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Banner -->
+					<section id="intro" class="main">
+						<span class="icon fa-diamond major"></span>
+						<h2>Edit a Contact</h2>
+
+<div class="row">
+
+        <div style="text-align: center; width: 100%; background-color: rgba(255, 255, 255, 0.8);text-align: center; margin-bottom: 10px;" >
+                <% res.forEach(function(indOne) { %>
+            <form accept-charset="UTF-8" action="/editcontact/<%=indOne.id %>" method="post">    
+                <div class="item">
+                  <label for="name">Name</label>
+                    <input name="name" type="text" value="<%= indOne.name %>"  />
+                  <label for="Comment">Comment</label>
+                    <input name="comment" type="text" value="<%= indOne.Comment %>"  />
+                   <label for="Email">Email</label> 
+                    <input name="email" type="text" value="<%= indOne.email %>"  />
+<button class="button">Confirm</button>
+                    </div>
+              </form>
+              <% }); %>
+    </div>
+  </h1>
+</div>
+<% include ../partials/footer %>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

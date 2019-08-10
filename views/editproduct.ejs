@@ -1,0 +1,53 @@
+<% include ../partials/header %>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Banner -->
+					<section id="intro" class="main">
+						<span class="icon fa-diamond major"></span>
+						<h2>Edit the Car</h2>
+
+                    <div class="row">
+                    <div style="text-align: center; width: 100%; background-color: rgba(255, 255, 255, 0.8);text-align: center; margin-bottom: 10px;" >
+                            <% result.forEach(function(product) { %>
+                        <form accept-charset="UTF-8" style="display: inline-block; width: 90%;" action="/addproduct" method="post" >    
+                                    <div class="item">
+                                      <label for="name">Car Name</label>
+                                        <input name="name" type="text" value="<%= product.Name %>" />
+                                         
+                                        <label for="price">Price</label>
+                                        <input name="price" type="text" value="<%= product.Price %>e" />
+
+                                        <label for="image">Image</label> 
+                                        <input name="image" type="text" value="<%= product.Image %>" />
+
+                                        <label for="extras">Extras</label> 
+                                        <input name="extras" type="text" value="<%= product.Extras %>" />
+
+                                        
+                    
+                                        <button class="button">Confirm Edit</button>
+                              </div>
+
+                                  </form>
+                                  <% }); %>
+                        </div>
+                      </h1>
+                    </div>
+                    
+                    
+                    
+                    <% include ../partials/footer %>
+                    
+
+				
+				<% include ../partials/footer %>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

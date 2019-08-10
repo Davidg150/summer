@@ -1,0 +1,76 @@
+<% include ../partials/header %>
+		<!-- Header -->
+			<header id="header" class="alt">
+				<div class="inner">
+					<h1>German Motors</h1>
+					<p>The home of German motor cars!</p>
+				</div>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Banner -->
+					<section id="intro" class="main">
+						<span class="icon fa-diamond major"></span>
+						<h2>Welcome! Here's a bit about us!</h2>
+						<p>We are an Irish company that specialise in German Cars. You wont find any other 
+							country cars here! We are all about feedback so please, if you have a minute 
+							pop into our review section and see what people have being saying and even 
+							leave us a messege!
+						</p>
+						<span id="dots">...</span> 
+						<span id="more"> The Automobile industry is one of the most affected by the recession the world is living these days. 
+								Competition is fierce in today's economy and with such an expensive product, having a quality website to show it to the world is more than important, it's crucial. 
+						<br>
+						<br>
+						Content of car-related websites is highly image-driven, usually combined with heavy animations, audio and video. We can see lots of 
+						<br>
+						<br>
+						image galleries, use of flash, customizing features... The use of microsites for specific models is also common. Structures tend to
+						<br>
+						<br>
+						be similar from one site to another, but fortunately this is changing in an attempt to differentiate car models fro
+						<br>
+						<br>
+						m their competitors. In this post we showcase 26 great automotive websites from around the world to inspire you.
+						</span>
+						</p>
+						<button onclick="readMore()" class="button big" id="less">Read more</button> 
+						
+						
+				
+					</section>
+
+				
+
+				
+				<% include ../partials/footer %>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script>
+					function readMore() {
+						
+					  var dots = document.getElementById("dots");
+					  var moreText = document.getElementById("more");
+					  var btnText = document.getElementById("less");
+					
+					
+					
+					  if (dots.style.display === "none") {
+						dots.style.display = "inline";
+						btnText.innerHTML = "Read more";
+						moreText.style.display = "none";
+					  } else {
+						dots.style.display = "none";
+						btnText.innerHTML = "Read less";
+						moreText.style.display = "inline";
+					  }
+					} 
+					</script>
+
+	</body>
+</html>

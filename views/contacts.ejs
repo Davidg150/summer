@@ -1,0 +1,53 @@
+<% include ../partials/header %>
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Banner -->
+					<section id="intro" class="main">
+						<span class="icon fa-diamond major"></span>
+						<h2>Here is What you had to say about our cars!</h2>
+						
+						<div class="grid-container">
+							
+								<% contact.forEach(function(contact) { %>
+								
+									<div class="item">     
+										 <div class="item">
+											<h1 class="itemtitle">Id: <%= contact.id %> </h1>
+											<h1 class="itemp">Name: <%= contact.name %></h1>
+											 <p class="itemp"><%= contact.email %></p>
+											 <p class="itemp"> Comment: <%= contact.Comment %></p>
+											 <a href="/editcontact/<%= contact.id %>" class="button">Edit me</a>
+									<p class="button" id="doit<%= contact.id %>">Delete</a>
+									 <p id="yes<%= contact.id %>"  style="display:none">
+											 Are you sure?
+											 <a href="/deletecontact/<%= contact.id %>" class="button">Confirm</a>
+						 </p>
+						 <script>
+						  $(document).ready(function(){
+								$("#doit<%= contact.id %>").click(function(){
+								$("#yes<%= contact.id %>").slideToggle(2000);
+
+								})
+
+						  })
+						 
+						 </script>
+											 </div>
+											
+											</div>
+											<% }); %>
+								  
+								</div>
+					  
+
+				<% include ../partials/footer %>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
